@@ -10,7 +10,9 @@ defmodule Calculator do
 	end
 
 	defp get_number do
-		String.to_integer(IO.gets("What is the number? ") |> String.strip)
+		IO.gets("What is the number? ") 
+		|> String.strip
+		|> String.to_integer
 	end
 
 	defp show_result(message, result) do
